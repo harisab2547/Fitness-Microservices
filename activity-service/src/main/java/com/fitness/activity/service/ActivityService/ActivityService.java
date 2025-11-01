@@ -15,10 +15,13 @@ import java.util.stream.Collectors;
 public class ActivityService {
 
     private final ActivityRepo activityRepo;
-
+    private final UserValidationService userValidationService;
 
     public ActivityResponse trackActivity(ActivityRequest activityRequest) {
-
+        boolean isValidUser = userValidationService.validateUserId(activityRequest.getId());
+        if (!isValidUser){
+            throw new RuntimeException(activityRequest.getId());
+        }
         Activity activity = Activity.builder()
                 .userId(activityRequest.getId())
                 .duartion(activityRequest.getDuration())
