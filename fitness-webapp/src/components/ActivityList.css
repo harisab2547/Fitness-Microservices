@@ -1,0 +1,72 @@
+.activity-list {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-list h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.activity-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.activity-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.activity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.activity-header h3 {
+  margin: 0;
+  color: #4a90e2;
+}
+
+.activity-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.activity-details {
+  margin-bottom: 1rem;
+}
+
+.activity-details p {
+  margin: 0.5rem 0;
+  color: #495057;
+}
+
+.activity-notes {
+  color: #6c757d;
+  font-style: italic;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.activity-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
